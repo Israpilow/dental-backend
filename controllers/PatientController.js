@@ -32,11 +32,12 @@ const create = function (req, res) {
 const update = async function (req, res) {
   const patientId = req.params.id;
   const errors = validationResult(req);
-
   const data = {
     fullname: req.body.fullname,
     phone: req.body.phone,
   };
+  console.log(patientId);
+  console.log(data);
 
   if (!errors.isEmpty()) {
     return res.status(422).json({
@@ -86,7 +87,6 @@ const show = async function (req, res) {
 
   try {
     const patient = await Patient.findById(id).populate("appointments").exec();
-    console.log(patient);
     res.json({
       status: "success",
       data: { ...patient._doc, appointments: patient.appointments },

@@ -4,15 +4,16 @@
 
 Stack:
 
-Express
-Express Validator
-Axios
-Lodash
-MongoDB / Mongoose
+- Express
+- Express Validator
+- Axios
+- Lodash
+- MongoDB / Mongoose
+
 Other:
 
-cors
-dayjs
-dotenv
-nodemon
-querystring
+- cors
+- dayjs
+- dotenv
+- nodemon
+- querystring
